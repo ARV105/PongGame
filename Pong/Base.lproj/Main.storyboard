@@ -1,14 +1,90 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oOG-qC-PLC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--MenuVC-->
+        <scene sceneID="EJf-71-7Xy">
+            <objects>
+                <viewController id="yCq-5t-hgZ" customClass="MenuVC" customModule="Pong" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nnh-bB-X4P"/>
+                        <viewControllerLayoutGuide type="bottom" id="dcB-f1-NII"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bwc-vz-YsD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpU-qd-Ou1">
+                                <rect key="frame" x="157" y="88" width="82" height="32"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
+                                <state key="normal" title="2 Player">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Player2With_sender:" destination="yCq-5t-hgZ" eventType="touchUpInside" id="9AL-XE-Y5o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x22-VP-3cs">
+                                <rect key="frame" x="167" y="317" width="41" height="32"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
+                                <state key="normal" title="Easy">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="EasyWith_sender:" destination="yCq-5t-hgZ" eventType="touchUpInside" id="jff-cx-6EZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJ8-9Q-lcP">
+                                <rect key="frame" x="157" y="366" width="62" height="32"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
+                                <state key="normal" title="Medium">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="MediumWith_sender:" destination="yCq-5t-hgZ" eventType="touchUpInside" id="FEb-Bv-EMg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfh-69-gcV">
+                                <rect key="frame" x="167" y="414" width="41" height="32"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
+                                <state key="normal" title="Hard">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="HardWith_sender:" destination="yCq-5t-hgZ" eventType="touchUpInside" id="8b6-mW-1LK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QJ8-9Q-lcP" firstAttribute="centerX" secondItem="dfh-69-gcV" secondAttribute="centerX" id="A12-WH-OOe"/>
+                            <constraint firstItem="QJ8-9Q-lcP" firstAttribute="top" secondItem="x22-VP-3cs" secondAttribute="bottom" constant="17" id="KiM-sw-khV"/>
+                            <constraint firstItem="x22-VP-3cs" firstAttribute="leading" secondItem="dfh-69-gcV" secondAttribute="leading" id="T6T-N0-6XR"/>
+                            <constraint firstItem="dfh-69-gcV" firstAttribute="top" secondItem="QJ8-9Q-lcP" secondAttribute="bottom" constant="16" id="bO5-9Z-DZb"/>
+                            <constraint firstItem="mpU-qd-Ou1" firstAttribute="top" secondItem="nnh-bB-X4P" secondAttribute="bottom" constant="68" id="e89-jn-xPE"/>
+                            <constraint firstItem="x22-VP-3cs" firstAttribute="centerY" secondItem="Bwc-vz-YsD" secondAttribute="centerY" id="g9d-G3-oUE"/>
+                            <constraint firstItem="x22-VP-3cs" firstAttribute="trailing" secondItem="dfh-69-gcV" secondAttribute="trailing" id="lhu-74-YBS"/>
+                            <constraint firstItem="x22-VP-3cs" firstAttribute="centerX" secondItem="Bwc-vz-YsD" secondAttribute="centerX" id="nRJ-ME-xIy"/>
+                            <constraint firstItem="mpU-qd-Ou1" firstAttribute="leading" secondItem="QJ8-9Q-lcP" secondAttribute="leading" id="uE2-xi-NI5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jHw-Kc-Fao"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bPp-sm-UMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184.80000000000001" y="36.431784107946029"/>
+        </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gameVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BV1-FR-VrT" customClass="GameViewController" customModule="Pong" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
@@ -21,6 +97,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="972" y="37.331334332833585"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NcY-2s-mOa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="oOG-qC-PLC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Bbg-Lu-Dic">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yCq-5t-hgZ" kind="relationship" relationship="rootViewController" id="JT9-1Q-ZeE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vPI-Ah-4Nc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-754.39999999999998" y="36.431784107946029"/>
         </scene>
     </scenes>
 </document>

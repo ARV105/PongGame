@@ -17,6 +17,8 @@
 		9420217D1E6E824C00F9899F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9420217B1E6E824C00F9899F /* LaunchScreen.storyboard */; };
 		942021881E6E824D00F9899F /* PongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942021871E6E824D00F9899F /* PongTests.swift */; };
 		942021931E6E824D00F9899F /* PongUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942021921E6E824D00F9899F /* PongUITests.swift */; };
+		942021A11E6F8EA900F9899F /* LLPIXEL3.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 942021A01E6F8EA800F9899F /* LLPIXEL3.ttf */; };
+		942021A31E6FD00C00F9899F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942021A21E6FD00C00F9899F /* MainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		9420218E1E6E824D00F9899F /* PongUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PongUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		942021921E6E824D00F9899F /* PongUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongUITests.swift; sourceTree = "<group>"; };
 		942021941E6E824D00F9899F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		942021A01E6F8EA800F9899F /* LLPIXEL3.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLPIXEL3.ttf; sourceTree = "<group>"; };
+		942021A21E6FD00C00F9899F /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,14 +107,11 @@
 		9420216B1E6E824C00F9899F /* Pong */ = {
 			isa = PBXGroup;
 			children = (
-				9420216C1E6E824C00F9899F /* AppDelegate.swift */,
-				9420216E1E6E824C00F9899F /* GameScene.sks */,
-				942021701E6E824C00F9899F /* Actions.sks */,
-				942021721E6E824C00F9899F /* GameScene.swift */,
-				942021741E6E824C00F9899F /* GameViewController.swift */,
-				942021761E6E824C00F9899F /* Main.storyboard */,
+				942021A71E6FD05F00F9899F /* StoryBoard */,
+				942021A61E6FD04A00F9899F /* GameScenes */,
+				942021A51E6FD03500F9899F /* Font */,
+				942021A41E6FD02500F9899F /* Swift Files */,
 				942021791E6E824C00F9899F /* Assets.xcassets */,
-				9420217B1E6E824C00F9899F /* LaunchScreen.storyboard */,
 				9420217E1E6E824C00F9899F /* Info.plist */,
 			);
 			path = Pong;
@@ -132,6 +133,43 @@
 				942021941E6E824D00F9899F /* Info.plist */,
 			);
 			path = PongUITests;
+			sourceTree = "<group>";
+		};
+		942021A41E6FD02500F9899F /* Swift Files */ = {
+			isa = PBXGroup;
+			children = (
+				9420216C1E6E824C00F9899F /* AppDelegate.swift */,
+				942021A21E6FD00C00F9899F /* MainVC.swift */,
+				942021721E6E824C00F9899F /* GameScene.swift */,
+				942021741E6E824C00F9899F /* GameViewController.swift */,
+			);
+			name = "Swift Files";
+			sourceTree = "<group>";
+		};
+		942021A51E6FD03500F9899F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				942021A01E6F8EA800F9899F /* LLPIXEL3.ttf */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
+		942021A61E6FD04A00F9899F /* GameScenes */ = {
+			isa = PBXGroup;
+			children = (
+				9420216E1E6E824C00F9899F /* GameScene.sks */,
+				942021701E6E824C00F9899F /* Actions.sks */,
+			);
+			name = GameScenes;
+			sourceTree = "<group>";
+		};
+		942021A71E6FD05F00F9899F /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				9420217B1E6E824C00F9899F /* LaunchScreen.storyboard */,
+				942021761E6E824C00F9899F /* Main.storyboard */,
+			);
+			name = StoryBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				942021781E6E824C00F9899F /* Main.storyboard in Resources */,
+				942021A11E6F8EA900F9899F /* LLPIXEL3.ttf in Resources */,
 				9420216F1E6E824C00F9899F /* GameScene.sks in Resources */,
 				9420217A1E6E824C00F9899F /* Assets.xcassets in Resources */,
 				9420217D1E6E824C00F9899F /* LaunchScreen.storyboard in Resources */,
@@ -274,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				942021731E6E824C00F9899F /* GameScene.swift in Sources */,
+				942021A31E6FD00C00F9899F /* MainVC.swift in Sources */,
 				942021751E6E824C00F9899F /* GameViewController.swift in Sources */,
 				9420216D1E6E824C00F9899F /* AppDelegate.swift in Sources */,
 			);
@@ -526,6 +566,7 @@
 				942021991E6E824D00F9899F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9420219A1E6E824D00F9899F /* Build configuration list for PBXNativeTarget "PongTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +575,7 @@
 				9420219C1E6E824D00F9899F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9420219D1E6E824D00F9899F /* Build configuration list for PBXNativeTarget "PongUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +584,7 @@
 				9420219F1E6E824D00F9899F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
